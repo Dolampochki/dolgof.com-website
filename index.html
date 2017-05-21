@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta property="og:url"                content="http://dolgof.com" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Dolgof.com" />
+    <meta property="og:description"        content="Freelance in Israel | UX > Design > Code | Websites for a small Businesses in Drupal | Video and Sound | Filming and editing of events | Katya Dolgov | Sasha Dolgov" />
+    <meta property="og:image"              content="http://dolgof.com/images/dolgofcom.png" />
+	<title>Dolgof.com</title>
+	<meta name="author" content="Katya Dolgov" />
+	<meta name="description" content="Freelance in Israel | UX > Design > Code | Websites for a small Businesses in Drupal | Video and Sound | Filming and editing of events | Katya Dolgov | Sasha Dolgov | Dolgof.com, שירותי פרילאנס בישראל: בניית אתרים, עיצוב, איפיון, צילום וידאו, עריכת וידאו" />
+	<meta name="keywords"  content="ux, design, code, client side, drupal, html, css, jquery, javascript, design, applications, websites, video, video filming, video edition,  בניית אתרים, עיצוב, איפיון, צילום וידאו, עריכת וידאו, עיצוב סאונד" />
+	<meta name="Resource-type" content="Document" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link href='https://fonts.googleapis.com/css?family=Alef:400,700&subset=hebrew,latin' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style13.css" />
+
+    <!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="img/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="img/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="img/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+	<link rel="apple-touch-icon" href="img/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="img/favicon-144.png">
+	<meta name="msapplication-config" content="img/browserconfig.xml">
+	<!-- ****** faviconit.com favicons ****** -->
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['intro', 'katya-dolgov-ux-design-code', 'sasha-dolgov-video-sound'],
+				navigation: false,
+				navigationPosition: 'left',
+				navigationTooltips: ['Intro', 'Katya Dolgov - UX > Design > Code', 'Sasha Dolgov - Video & Sound'],
+   				loopHorizontal:false,
+				'onLeave': function(index, nextIndex, direction){
+					if (index > 1){
+						$('.modal-dialog').removeClass('hide-opacity');
+						$('.modal-dialog').addClass('hide-opacity');
+						$('.open-bio .pic').addClass('hide-opacity');
+						$('.open-bio .pic').removeClass('hide-opacity');
+					}
+				},
+				'onSlideLeave': function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+					if (index == 2 && slideIndex == 1 && !nextSlideIndex){
+						$('#section1 .contact_buttons').removeClass('last');
+						$('#section1 .contact_buttons').addClass('last');
+					}
+
+					if (index == 3 && slideIndex == 1 && !nextSlideIndex){
+						$('#section2 .contact_buttons').removeClass('last');
+						$('#section2 .contact_buttons').addClass('last');
+					}
+
+					if (index == 2 && slideIndex != 1){
+						$('#section1 .contact_buttons').removeClass('last');
+					}
+
+					if (index == 3 && slideIndex != 1){
+						$('#section2 .contact_buttons').removeClass('last');
+					}
+				}
+
+
+			});
+
+			$('.open-katya-bio').click(function() {
+				$('#katya-dolgov-bio').toggleClass('hide-opacity');
+				$('.open-katya-bio .pic').toggleClass('hide-opacity');
+			});
+
+			$('#katya-dolgov-bio').click(function() {
+				$('#katya-dolgov-bio').addClass('hide-opacity');
+				$('.open-katya-bio .pic').removeClass('hide-opacity');
+			});
+
+			$('#katya-dolgov-bio .close').click(function() {
+				$('#katya-dolgov-bio').addClass('hide-opacity');
+				$('.open-katya-bio .pic').removeClass('hide-opacity');
+			});
+
+			$('.open-sasha-bio').click(function() {
+				$('#sasha-dolgov-bio').toggleClass('hide-opacity');
+				$('.open-sasha-bio .pic').toggleClass('hide-opacity');
+			});
+
+			$('#sasha-dolgov-bio').click(function() {
+				$('#sasha-dolgov-bio').addClass('hide-opacity');
+				$('.open-sasha-bio .pic').removeClass('hide-opacity');
+			});
+
+			$('#sasha-dolgov-bio .close').click(function() {
+				$('#sasha-dolgov-bio').addClass('hide-opacity');
+				$('.open-sasha-bio .pic').removeClass('hide-opacity');
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+
+<div id="katya-dolgov-bio" class="modal-dialog hide-opacity">
+	<div class="modal-body">
+		<a title="Close" class="close"><span class="icon-cross"></span></a>
+		<div class="modal-pic"></div>
+        <h2>קטיה דולגוב</h2>
+        <h3>UX > UI > Code</h3>
+        <p>כבר יותר מ-15 שנים אני מתעסקת בתחום של <a href="https://www.behance.net/KatyaDolgov" target="_blank">אתרים ואפליקציות</a>: למדתי עיצוב (בצלאל), תכנות צד הלקוח ודרופל, אפיון חווית המשתמש (ג'ון ברייס). כל יום אני לומדת משהו חדש ומרחיבה  את הידע המקצועי שלי. אני מעריכה את הלקוחות שלי ומבטיחה עבודה איכותית, עמידה בלוח זמנים ויחס אישי לכל אחד ואחת.</p>
+		<p>אתם רוצים אתר אישי או לעסק? צריכים מעצב או מאפיין לאתר או אפליקציה? פנו אליי: <a href="mailto:katya@dolgof.com">katya@dolgof.com</a> או <a href="tel:+972542116959">054-2116959</a></p>
+	</div>
+</div>
+
+<div id="sasha-dolgov-bio" class="modal-dialog hide-opacity">
+	<div class="modal-body">
+		<a title="Close" class="close"><span class="icon-cross"></span></a>
+		<div class="modal-pic"></div>
+        <h2>סשה  דולגוב</h2>
+        <h3>Video &amp; Sound</h3>
+        <p>אני מוזיקאי וסאונדמן  מקצועי. כבר יותר מ-18 שנים אני עובד בתור סאונדמן בתאטרון הבימה, כפרילאנסר אני מתעסק <a href="https://www.youtube.com/user/sashadolgofcom/videos" target="_blank">בצילום ועריכת וידאו</a> (הצגות, הופעות ואירועים) והקלטת סאונד.  באולפן הביתי שלי ציוד הכי חדש ועדכני. אני מציע ללקוחות שלי מגוון שירותים בתחום וידאו וסאונד, יחס אישי ומחירים סבירים.</p>
+		<p>אתם צריכים צלם לאירוע? סרט הפתעה? הקלטת סאונד? פנו אליי: <a href="mailto:sasha@dolgof.com">sasha@dolgof.com</a> או <a href="tel:+972544610638">054-4610638</a></p>
+	</div>
+</div>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<h1>Dolgof.com</h1>
+			<div class="katya_top">
+            	<h2>קטיה דולגוב</h2>
+                <ul>
+                	<li><a href="#katya-dolgov-ux-design-code/4">בניית אתרים לעסקים קטנים</a></li>
+                	<li><a href="#katya-dolgov-ux-design-code/3">html5/css3/JS/Angular</a></li>
+                	<li><a href="#katya-dolgov-ux-design-code/2">אפיון אתרים ואפליקציות (UX)</a></li>
+                	<li><a href="#katya-dolgov-ux-design-code/1">עיצוב אתרים ואפליקציות</a></li>
+                </ul>
+                <a href="#katya-dolgov-ux-design-code" class="more">לפרטים <span class="icon-arrow-down"></a>
+            </div>
+            <div class="sasha_top">
+            	<h2>סשה דולגוב</h2>
+                <ul>
+                	<li><a href="#sasha-dolgov-video-sound/3">צילום אירועים והצגות</a></li>
+                	<li><a href="#sasha-dolgov-video-sound/3">יצירת קליפים וסרטוני הפתעה</a></li>
+                	<li><a href="#sasha-dolgov-video-sound/2">עיצוב סאונד</a></li>
+                	<li><a href="#sasha-dolgov-video-sound/1">דגימת וידאו אנלוגי ודיגיטלי</a></li>
+                </ul>
+                <a href="#sasha-dolgov-video-sound" class="more">לפרטים <span class="icon-arrow-down"></a>
+            </div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	   <div class="slide" id="slide10">
+			<div class="work_type">
+			</div>
+		</div>
+        <div class="slide" id="slide11">
+			<div class="work_type">
+				<h2>עיצוב אתרים ואפליקציות</h2>
+				<ul>
+                	<li>עיצוב איכותי ומודרני</li>
+                	<li>אתרים, אפליקציות Web/Mobile/Tablet</li>
+                	<li>עיצוב אייקונים, איורים</li>
+                	<li>התאמת העיצוב לפלטפורמות שונות</li>
+                </ul>
+			</div>
+		</div>
+	    <div class="slide" id="slide12">
+			<div class="work_type">
+				<h2>איפיון אתרים ואפליקציות (UX)</h2>
+				<ul>
+                	<li>הגדרת מטרות עסקיות</li>
+                	<li>ניתוח קהל היעד, פרסונות</li>
+                	<li>הגדרת פיצ'רים ומבנה, סקטצ'ינג</li>
+                	<li>בניית פרוטוטייפים עובדים ב-Axure ותוכנות אחרות</li>
+                </ul>
+			</div>
+		</div>
+        <div class="slide" id="slide13">
+			<div class="work_type">
+				<h2>תכנות צד לקוח (Client Side)</h2>
+				<ul>
+                	<li>תכנות מקצועי html5/css3</li>
+                	<li>יצירת אנימציות css3/jquery</li>
+                	<li>בניית עמודים אינטראקטיביים ב-JS/Angular</li>
+                	<li>עיצוב גמיש (Responsive)</li>
+                </ul>
+			</div>
+		</div>
+        <div class="slide active" id="slide14">
+			<div class="work_type">
+				<h2>בניית אתרים</h2>
+				<ul>
+                	<li>איפיון, עיצוב ובניית אתרים מאפס</li>
+                	<li>אתרים לעסקים קטנים, אתרי תדמית, עמודים אישיים</li>
+                	<li>פיתוח אתרים על בסיס Wordpress/Wix עם מערכת ניהול</li>
+                	<li>הדרכה וליווי הלקוח לאחר העלאה לשרת</li>
+                </ul>
+			</div>
+		</div>
+		<div class="contact_buttons">
+        	<ul itemscope itemtype="http://schema.org/LocalBusiness">
+            	<li><a class="open-katya-bio open-bio"><span class="link_title">קטיה דולגוב</span><span class="pic-bg"><span class="pic katya-pic"></span></span></a></li>
+                <li><a href="https://il.linkedin.com/in/katyadolgov" target="_blank" id="_url1" itemprop="url"><span class="link_title">קורות חיים</span><span class="icon icon-linkedin"></span></a></li>
+            	<li><a href="https://www.behance.net/KatyaDolgov" target="_blank" id="_url2" itemprop="url"><span class="link_title">פורטפוליו</span><span class="icon icon-behance" target="_blank"></span></a></li>
+            	<li><a href="mailto:katya@dolgof.com" id="_email1" itemprop="email"><span class="link_title">אימייל</span><span class="icon icon-mail2"></span><span class="text-link email">katya@dolgof.com</span></a></li>
+            	<li><a href="tel:+972542116959" id="_telephone1" itemprop="telephone"><span class="link_title">טלפון</span><span class="icon icon-phone"></span><span class="text-link phone">054-2116959</span></a></li>
+            </ul>
+        </div>
+	</div>
+	<div class="section" id="section2">
+		 <div class="slide" id="slide20">
+			<div class="work_type">
+			</div>
+         </div>
+         <div class="slide" id="slide21">
+			<div class="work_type">
+				<h2>דגימת HDMI, SD, ו-AV</h2>
+				<ul>
+                	<li>דגימה דיגיטלית למחשב מכל מצלמה (קלטת)</li>
+                	<li>המרה לכל פורמט דיגיטלי</li>
+                	<li>ניקוי רעשים בתמונה וסאונד</li>
+                    <li>חומרה: Blackmagic Design</li>
+                </ul>
+			</div>
+		</div>
+        <div class="slide" id="slide22">
+			<div class="work_type">
+				<h2>הקלטה, עריכה ועיצוב סאונד</h2>
+				<ul>
+                	<li>מבחר אפשרויות להקלטה (קונסולה, מיקרופונים, אולפן)</li>
+                	<li>עיצוב פס קול (קולות רקע, עיצוב מוזיקלי, קריינות)</li>
+                	<li>סאונדמן להופעות ואירועים</li>
+                    <li>תוכנות: Samplitude, WaveLab, Ableton Live</li>
+                </ul>
+			</div>
+		</div>
+        <div class="slide active" id="slide23">
+			<div class="work_type">
+				<h2>צילום ועריכת וידאו</h2>
+				<ul>
+                	<li>קליפים, אירועים והופעות, פרזנטציות, הצגות, סרטי הפתעה</li>
+                	<li>עבודה עם תאורה טבעית או פנסים</li>
+                	<li>ציוד מקצועי חדשני</li>
+                	<li>תוכנות: Premier, AfterEffect, Resolume</li>
+                </ul>
+			</div>
+		</div>
+		<div class="contact_buttons ">
+        	<ul itemscope itemtype="http://schema.org/LocalBusiness">
+            	<li><a class="open-sasha-bio open-bio"><span class="link_title">סשה דולגוב</span><span class="pic-bg"><span class="pic sasha-pic"></span></span></a></li>
+            	<li><a href="https://il.linkedin.com/in/sasha-dolgov-3239b115" target="_blank" id="_url3" itemprop="url"><span class="link_title">קורות חיים</span></span><span class="icon icon-linkedin"></span></a></li>
+            	<li><a href="https://www.youtube.com/user/sashadolgofcom/videos" target="_blank" id="_url4" itemprop="url"><span class="link_title">פורטפוליו</span><span class="icon icon-youtube" target="_blank"></span></a></li>
+            	<li><a href="mailto:sasha@dolgof.com" id="_email2" itemprop="email"><span class="link_title">אימייל</span><span class="icon icon-mail2"></span><span class="text-link email">sasha@dolgof.com</span></a></li>
+            	<li><a href="tel:+972544610638" id="_telephone2" itemprop="telephone"><span class="link_title">טלפון</span><span class="icon icon-phone"></span><span class="text-link phone">054-4610638</span></a></li>
+            </ul>
+        </div>
+	</div>
+</div>
+
+
+</body>
+</html>
